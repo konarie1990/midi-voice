@@ -1,5 +1,23 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Requirements
+
+1 - Web Audio Api - text-to-speech
+
+- should have 6 "voices" and map to full octave on chromatic keyboard (12 keys)
+- should have access to all web audio voices and languages
+- should have "speak" and "stop" function on each voice
+
+2 - webmidi.js - send midi to browser
+
+- app should receive midi from hardware and software (DAW)
+- each voice should receive midi "play" - each voice should receive midi "stop"
+- each voice should display midi received indicator (visual)
+- map midi notes:
+- start on "C3" to receive midi "noteon" message for play function, the next key on scale ("C#3") should be "noteon" for stop function
+
+- map keys in chromatic scale, example: "C3" voice 1 play, "C#3" voice 1 stop, "D3" voice 2 play, "D#3" voice 2 stop, and so on...
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -66,3 +84,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# midi-voice
