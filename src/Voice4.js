@@ -24,7 +24,7 @@ import WebMidi from 'webmidi';
 //   });
 // });
 
-class Voice extends Component {
+class Voice4 extends Component {
   speech = window.speechSynthesis;
   m = new SpeechSynthesisUtterance();
   noOptionSelected = {
@@ -71,10 +71,10 @@ class Voice extends Component {
         console.log(
           "Received 'noteon' message (" + e.note.name + e.note.octave + ').'
         );
-        if (e.note.name + e.note.octave === 'C3') {
+        if (e.note.name + e.note.octave === 'F#0') {
           handleSpeak();
         }
-        if (e.note.name + e.note.octave === 'C#3') {
+        if (e.note.name + e.note.octave === 'G0') {
           cancelSpeak();
         }
       });
@@ -158,7 +158,7 @@ const Instance = props => {
 
   return (
     <form action='#'>
-      <h2>Voice</h2>
+      <h2>Voice 4</h2>
       <div>
         <select onChange={props.changeSelectedVoice.bind(this)}>
           <option value='null' disabled>
@@ -225,4 +225,4 @@ const Instance = props => {
   );
 };
 
-export default Voice;
+export default Voice4;
